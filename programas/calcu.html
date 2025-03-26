@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CALCULADORA BASICA</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .calculator-container {
+            width: 350px;
+            padding: 20px;
+            background-color: #001f3f; /* Azul marino */
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        table {
+            margin: auto;
+            border-collapse: collapse;
+        }
+        .button {
+            width: 60px;
+            height: 60px;
+            font-size: 20px;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+        /* Botones de números */
+        #siete, #ocho, #nueve, #cuatro, #cinco, #seis, #uno, #dos, #tres, #cero {
+            background-color: #40E0D0; /* Turquesa claro */
+        }
+        /* Botón igual */
+        #igual {
+            background-color: #2ECC40; /* Verde */
+        }
+        /* Botones Clear y Delete */
+        #clear, #delete {
+            background-color: #FF4136; /* Rojo */
+        }
+        /* Resto de botones */
+        #porcent, #expo, #pi, #abrir_par, #cerrar_par, #suma, #resta, #division, #multiplicacion, #punto {
+            background-color: #20B2AA; /* Verde agua */
+        }
+        #resultado, #entrada {
+            width: 100%;
+            height: 30px;
+            font-size: 20px;
+            margin-bottom: 10px;
+            display: block;
+            border: none;
+            border-radius: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator-container">
+        <h1 style="text-align: center; color: white;">CALCULATOR 1.0</h1>
+        <input type="text" id="entrada" placeholder="Insertar operacion">
+        <input type="text" id="resultado" readonly placeholder="Resultado">
+        <table>
+            <!-- Fila 1 -->
+            <tr>
+                <td><button class="button" id="clear" onclick="limpiar_pantalla()">Clear</button></td>
+                <td><button class="button" id="delete" onclick="borrar_caracter()">del</button></td>
+                <td><button class="button" id="porcent" onclick="botones_operaciones('/100')">%</button></td>
+                <td><button class="button" id="expo" onclick="botones_operaciones('**')">^</button></td>
+                <td><button class="button" id="pi" onclick="botones_numeros('3.1416')">pi</button></td>
+            </tr>
+            <!-- Fila 2 -->
+            <tr>
+                <td><button class="button" id="siete" onclick="botones_numeros('7')">7</button></td>
+                <td><button class="button" id="ocho" onclick="botones_numeros('8')">8</button></td>
+                <td><button class="button" id="nueve" onclick="botones_numeros('9')">9</button></td>
+                <td><button class="button" id="abrir_par" onclick="botones_operaciones('(')">(</button></td>
+                <td><button class="button" id="cerrar_par" onclick="botones_operaciones(')')">)</button></td>
+            </tr>
+            <!-- Fila 3 -->
+            <tr>
+                <td><button class="button" id="cuatro" onclick="botones_numeros('4')">4</button></td>
+                <td><button class="button" id="cinco" onclick="botones_numeros('5')">5</button></td>
+                <td><button class="button" id="seis" onclick="botones_numeros('6')">6</button></td>
+                <td><button class="button" id="suma" onclick="botones_operaciones('+')">+</button></td>
+                <td><button class="button" id="resta" onclick="botones_operaciones('-')">-</button></td>
+            </tr>
+            <!-- Fila 4 -->
+            <tr>
+                <td><button class="button" id="uno" onclick="botones_numeros('1')">1</button></td>
+                <td><button class="button" id="dos" onclick="botones_numeros('2')">2</button></td>
+                <td><button class="button" id="tres" onclick="botones_numeros('3')">3</button></td>
+                <td><button class="button" id="division" onclick="botones_operaciones('/')">/</button></td>
+                <td><button class="button" id="multiplicacion" onclick="botones_operaciones('*')">x</button></td>
+            </tr>
+            <!-- Fila 5 -->
+            <tr>
+                <td><button class="button" id="punto" onclick="botones_operaciones('.')">.</button></td>
+                <td><button class="button" id="cero" onclick="botones_numeros('0')">0</button></td>
+                <td><button class="button" id="divsobra" onclick="botones_operaciones('%')">res</button></td>
+                <td colspan="2"><button class="button" id="igual" style="width: 125px;" onclick="sacarResultado()">=</button></td>
+            </tr>
+        </table>
+    </div>
+    <script src="calcu.js"></script>
+</body>
+</html>
