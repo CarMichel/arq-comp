@@ -1,28 +1,38 @@
-// Función para manejar los números
+/****************************************************************
+OBJETIVO: Crear una calculadora básica con HTML y JavaScript
+AUTOR: Carlos Enrique Michel Figueroa
+VERSIÓN: 1.0
+FECHA DE CREACIÓN: 26/03/2025
+******************************************************************/
+
+document.addEventListener("DOMContentLoaded", () => {
+    const titulo = document.querySelector(".calculator-container h1");
+    titulo.textContent += " Version 1.0";
+});
+
+/********************FUNCION BOTONES ********************/
 function botones_numeros(numero) {
     let entrada = document.getElementById("entrada");
     entrada.value += numero; // Concatenar el número en la entrada
 }
 
-// Función para manejar los signos de operación
 function botones_operaciones(signo) {
     let entrada = document.getElementById("entrada");
     entrada.value += signo; // Concatenar el signo en la entrada
 }
 
-// Función para borrar un carácter
+/********************FUNCION BORRADORES *****************/
 function borrar_caracter() {
     let entrada = document.getElementById("entrada");
     entrada.value = entrada.value.slice(0, -1); // Eliminar el último carácter
 }
 
-// Función para limpiar la pantalla
 function limpiar_pantalla() {
     document.getElementById("entrada").value = ""; // Vaciar la entrada
     document.getElementById("resultado").value = ""; // Vaciar el resultado
 }
 
-// Función para validar la entrada
+/********************FUNCIONES DE VALIDACION Y CALCULO *****************/
 function validar_entrada() {
     try {
         let operacion = document.getElementById("entrada").value;
@@ -34,7 +44,6 @@ function validar_entrada() {
     }
 }
 
-// Función para calcular el resultado
 function sacarResultado() {
     if (validar_entrada()) {
         let operacion = document.getElementById("entrada").value;
