@@ -1,0 +1,62 @@
+# Conversor de Base - Versión 1.0.0
+
+## Descripción
+Este programa permite realizar conversiones de un número introducido en una base específica hacia otra base seleccionada. Fue desarrollado como parte de la materia de **Arquitectura del Computador** y ofrece una solución práctica para comprender cómo funcionan las conversiones entre diferentes sistemas de numeración.
+
+---
+
+## Cómo empezar
+1. **Abrir el archivo HTML:**
+   - Localiza el archivo `convert.html`.
+   - Ábrelo en cualquier navegador moderno (Google Chrome, Firefox, Edge, etc.).
+
+---
+
+## Uso del programa
+### Interfaz de usuario
+Al abrir el programa, encontrarás una interfaz sencilla y organizada con las siguientes opciones:
+1. **Introduce un número:** En este campo, escribe el número que deseas convertir.
+2. **En base:** Selecciona la base actual del número introducido (por ejemplo: binario [2], decimal [10], hexadecimal [16], etc.).
+3. **Convertir a base:** Selecciona la base a la que deseas convertir el número.
+4. **Resultado:** Aquí se mostrará el resultado de la conversión.
+
+---
+
+### Botones funcionales
+El programa incluye dos botones principales:
+1. **Procesar:**
+   - Al hacer clic en este botón, el programa valida la entrada proporcionada.
+   - Si el número introducido contiene caracteres inválidos, aparecerá un mensaje en el campo de resultado indicando **"Error: Entrada no válida"**.
+   - Si todo es correcto, se realiza la conversión y el resultado se muestra en el campo "Resultado".
+
+2. **Limpiar:**
+   - Al hacer clic en este botón, todos los campos de entrada y resultado se vaciarán para que puedas realizar una nueva operación.
+
+---
+
+## Requisitos
+- Navegador con soporte para JavaScript.
+- Compatible con bases del 2 al 16.
+
+---
+
+## Estructura del programa
+### HTML
+El archivo HTML proporciona la estructura visual del programa, incluyendo los cuadros de entrada, selecciones de bases y botones.
+
+### JavaScript
+El archivo JavaScript contiene tres funciones clave:
+1. `limpiar_pantalla()`: Borra todos los valores ingresados y reinicia las selecciones.
+2. `validar_entrada()`: Comprueba que el número ingresado sea válido en la base seleccionada.
+3. `sacarResultado()`: Realiza la conversión entre bases y muestra el resultado en la interfaz.
+
+---
+
+### Datos del autor
+Autor: Carlos Enrique Michel Figueroa 
+Materia: Arquitectura del Computador 
+Repositorio: https://github.com/CarMichel/arq-comp.git 
+
+---
+
+¡Gracias por usar el **Conversor de Base**!
